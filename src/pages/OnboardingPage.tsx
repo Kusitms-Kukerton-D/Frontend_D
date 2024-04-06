@@ -1,6 +1,13 @@
 import { styled } from "styled-components";
 
 const OnboardingPage = () => {
+  const handleLogin = async () => {
+    const kakaoURL = `https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${
+      import.meta.env.VITE_REST_API_KEY
+    }&redirect_uri=${import.meta.env.VITE_REDIRECT_URI}`;
+    window.location.href = kakaoURL;
+  };
+
   return (
     <Layout>
       <div>
@@ -11,7 +18,11 @@ const OnboardingPage = () => {
         <Desc>도파민에서 벗어나고, 마음의 안정을 찾아봐요.</Desc>
       </div>
       <div>
-        <KakaoBtn src="/public/assets/onboarding/kakaoBtn.svg" alt="kakao" />
+        <KakaoBtn
+          src="/public/assets/onboarding/kakaoBtn.svg"
+          alt="kakao"
+          onClick={handleLogin}
+        />
       </div>
     </Layout>
   );

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Axios from "../apis/axios";
+import { Navigate } from "react-router-dom";
 
 const RedirectPage = () => {
   const code = new URL(window.location.href).searchParams.get("code");
@@ -14,7 +15,7 @@ const RedirectPage = () => {
     handleRedirect();
   }, []);
 
-  return null;
+  return <Navigate to="/main" replace />;
 };
 
 export default RedirectPage;
