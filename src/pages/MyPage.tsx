@@ -1,8 +1,10 @@
 import { styled } from "styled-components";
 import Navigation from "../components/navigation/Navigation";
-import CertifiedPage from "./CertifiedPage";
+import { useNavigate } from "react-router-dom";
 
 const MyPage = () => {
+  const navigate = useNavigate();
+
   return (
     <Layout>
       <Content>
@@ -33,9 +35,27 @@ const MyPage = () => {
         <Certified>
           <CertifiedTitle>나의 인증</CertifiedTitle>
           <ImageBox>
-            <img src="/public/assets/mypage/certified1.svg" alt="certified" />
-            <img src="/public/assets/mypage/certified2.svg" alt="certified" />
-            <img src="/public/assets/mypage/certified3.svg" alt="certified" />
+            <img
+              src="/public/assets/mypage/certified1.png"
+              alt="certified"
+              onClick={() => {
+                navigate("/mypage/1");
+              }}
+            />
+            <img
+              src="/public/assets/mypage/certified2.png"
+              alt="certified"
+              onClick={() => {
+                navigate("/mypage/2");
+              }}
+            />
+            <img
+              src="/public/assets/mypage/certified3.png"
+              alt="certified"
+              onClick={() => {
+                navigate("/mypage/3");
+              }}
+            />
           </ImageBox>
         </Certified>
       </Content>
