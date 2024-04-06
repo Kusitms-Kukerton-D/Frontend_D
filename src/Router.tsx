@@ -9,6 +9,7 @@ import RandomPage from "./pages/RandomPage";
 import MyPage from "./pages/MyPage";
 import OnionPage from "./pages/OnionPage";
 import MyPageDetail from "./pages/MyPageDetail";
+import CouponPage from "./pages/CouponPage";
 
 function Router() {
   return (
@@ -24,6 +25,7 @@ function Router() {
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/mypage/:id" element={<MyPageDetail />} />
           <Route path="/information" element={<InformationPage />} />
+          <Route path="/coupon" element={<CouponPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
