@@ -1,7 +1,10 @@
 import { styled } from "styled-components";
 import Navigation from "../components/navigation/Navigation";
+import { useNavigate } from "react-router-dom";
 
 const RandomPage = () => {
+  const navigate = useNavigate();
+
   return (
     <Layout>
       <Content>
@@ -12,7 +15,13 @@ const RandomPage = () => {
             <div>랜덤 추천 할 일 롤링!</div>
           </div>
           <img src="/public/assets/random/randomBox.png" alt="random" />
-          <Button>랜덤 박스 뽑기</Button>
+          <Button
+            onClick={() => {
+              navigate("result");
+            }}
+          >
+            랜덤 박스 뽑기
+          </Button>
         </RandomBox>
       </Content>
       <NavigationLayout>

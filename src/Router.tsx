@@ -10,6 +10,7 @@ import MyPage from "./pages/MyPage";
 import OnionPage from "./pages/OnionPage";
 import MyPageDetail from "./pages/MyPageDetail";
 import CouponPage from "./pages/CouponPage";
+import RandomResultPage from "./pages/RandomResultPage";
 
 function Router() {
   return (
@@ -21,6 +22,7 @@ function Router() {
           <Route path="/main" element={<MainPage />} />
           <Route path="/certified" element={<CertifiedPage />} />
           <Route path="/random" element={<RandomPage />} />
+          <Route path="/random/result" element={<RandomResultPage />} />
           <Route path="/onion" element={<OnionPage />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/mypage/:id" element={<MyPageDetail />} />
