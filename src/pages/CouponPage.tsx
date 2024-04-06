@@ -31,6 +31,7 @@ export default CouponPage;
 
 const Layout = styled.div`
   padding: 1.5rem 1rem;
+  padding-top: 68px;
 
   > img {
     width: 100%;

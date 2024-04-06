@@ -83,7 +83,12 @@ export default InformationPage;
 
 const Container = styled.div`
   padding: 0 20px;
-  padding-bottom: 52px;
+  padding-bottom: 30px;
+  padding-top: 44px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
 `;
 
 const Header = styled.div``;

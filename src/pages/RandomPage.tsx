@@ -42,6 +42,8 @@ const Layout = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  padding-top: 44px;
 `;
 
 const Content = styled.div`
