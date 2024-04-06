@@ -3,6 +3,8 @@ import IconArrow from "../../public/assets/icons/arrow.svg";
 import { useState } from "react";
 import InformationField from "../components/InformationField";
 import { INFORMATION_FIELD } from "../constants/InformationConstants";
+import { useNavigate } from "react-router-dom";
+import Axios from "../apis/axios";
 
 const InformationPage = () => {
   const [step, setStep] = useState(1);
@@ -12,6 +14,25 @@ const InformationPage = () => {
   const [selectedDisinterestFields, setSelectedDisinterestFields] = useState<
     string[]
   >([]);
+  const navigate = useNavigate();
+
+  const handleRegister = async () => {
+    try {
+      const response = await Axios.post("member/onboarding", {
+        interested_categories: selectedInterestFields,
+        restrained_categories: selectedDisinterestFields,
+        user_id: 1,
+      });
+
+      if (response.status === 200) {
+        navigate("/random");
+      } else {
+        console.error("기본 정보 입력이 완료되었습니다.");
+      }
+    } catch (error) {
+      console.error("요청 중 오류가 발생했습니다:", error);
+    }
+  };
 
   return (
     <Container>
@@ -50,7 +71,7 @@ const InformationPage = () => {
           setSelectedFields={setSelectedDisinterestFields}
           buttonText="저장하기"
           handleButtonClick={() => {
-            // 백엔드에서 정보 등록
+            handleRegister();
           }}
         />
       )}
