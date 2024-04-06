@@ -39,7 +39,7 @@ const FONT = ({ font, weight, size, lineHeight }: Font): string => {
   return `
     font-family : "${font}";
     font-weight : ${weight};
-    font-size : ${size}rem;
+    font-size : ${size}px;
     line-height : ${lineHeight}%;
     `;
 };
@@ -48,65 +48,65 @@ const fonts = {
   primary: FONT({
     font: "SUIT",
     weight: 600,
-    size: 2.8,
+    size: 28,
     lineHeight: 160,
   }),
 
   heading1: FONT({
     font: "SUIT",
-    weight: 400,
-    size: 2.2,
+    weight: 600,
+    size: 22,
     lineHeight: 160,
   }),
   heading2: FONT({
     font: "SUIT",
-    weight: 400,
-    size: 1.8,
+    weight: 600,
+    size: 18,
     lineHeight: 160,
   }),
   heading3: FONT({
     font: "SUIT",
     weight: 600,
-    size: 1.6,
-    lineHeight: 160,
+    size: 16,
+    lineHeight: 120,
   }),
 
   body1: FONT({
     font: "SUIT",
     weight: 400,
-    size: 1.6,
+    size: 16,
     lineHeight: 160,
   }),
   body2: FONT({
     font: "SUIT",
     weight: 400,
-    size: 1.4,
+    size: 14,
     lineHeight: 160,
   }),
 
   caption: FONT({
     font: "SUIT",
     weight: 400,
-    size: 1.3,
+    size: 13,
     lineHeight: 160,
   }),
 
   label1: FONT({
     font: "SUIT",
     weight: 600,
-    size: 1.6,
+    size: 16,
     lineHeight: 160,
   }),
   label2: FONT({
     font: "SUIT",
     weight: 400,
-    size: 1.6,
+    size: 16,
     lineHeight: 160,
   }),
   label3: FONT({
     font: "SUIT",
     weight: 400,
-    size: 1.4,
+    size: 14,
     lineHeight: 160,
   }),
 };
