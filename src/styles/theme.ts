@@ -56,13 +56,13 @@ const fonts = {
 
   heading1: FONT({
     font: "SUIT",
-    weight: 400,
+    weight: 600,
     size: 22,
     lineHeight: 160,
   }),
   heading2: FONT({
     font: "SUIT",
-    weight: 400,
+    weight: 600,
     size: 18,
     lineHeight: 160,
   }),
@@ -70,7 +70,7 @@ const fonts = {
     font: "SUIT",
     weight: 600,
     size: 16,
-    lineHeight: 160,
+    lineHeight: 120,
   }),
 
   body1: FONT({
