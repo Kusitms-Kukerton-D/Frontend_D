@@ -1,12 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 
 const OnboardingPage = () => {
-  const handleLogin = async () => {
-    const kakaoURL = `https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${
-      import.meta.env.VITE_REST_API_KEY
-    }&redirect_uri=${import.meta.env.VITE_REDIRECT_URI}`;
-    window.location.href = kakaoURL;
-  };
+  const navigate = useNavigate();
 
   return (
     <Layout>
@@ -18,11 +14,7 @@ const OnboardingPage = () => {
         <Desc>도파민에서 벗어나고, 마음의 안정을 찾아봐요.</Desc>
       </div>
       <div>
-        <KakaoBtn
-          src="/public/assets/onboarding/kakaoBtn.svg"
-          alt="kakao"
-          onClick={handleLogin}
-        />
+        <button onClick={() => navigate("/next")}>다음</button>
       </div>
     </Layout>
   );
@@ -41,6 +33,17 @@ const Layout = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  div {
+    button {
+      width: 100%;
+      padding: 0.8rem 0;
+      background: ${({ theme }) => theme.colors.gray800};
+      color: ${({ theme }) => theme.colors.gray0};
+      border-radius: 0.5rem;
+      font-size: 15px;
+    }
+  }
 `;
 
 const Title = styled.div`
@@ -56,9 +59,4 @@ const Desc = styled.div`
   style: ${({ theme }) => theme.fonts.heading3};
   color: ${({ theme }) => theme.colors.gray700};
   margin-bottom: 0.2rem;
-`;
-
-const KakaoBtn = styled.img`
-  width: 100%;
-  cursor: pointer;
 `;

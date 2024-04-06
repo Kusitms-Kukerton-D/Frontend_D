@@ -15,6 +15,7 @@ import RandomResultPage from "./pages/RandomResultPage";
 import OnionDiaryPage from "./pages/OnionDiaryPage";
 import RegisterPage from "./pages/RegisterPage";
 import MyCertification from "./pages/MyCertification";
+import OnboardingPage1 from "./pages/OnboardingPage1";
 
 function Router() {
   return (
@@ -22,6 +23,7 @@ function Router() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<OnboardingPage />} />
+          <Route path="/next" element={<OnboardingPage1 />} />
           <Route path="/auth" element={<RedirectPage />} />
           <Route path="/main" element={<MainPage />} />
           <Route path="/certified" element={<CertifiedPage />} />
