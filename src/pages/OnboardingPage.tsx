@@ -36,6 +36,7 @@ const Layout = styled.div`
   justify-content: space-between;
   height: 100vh;
   padding: 2rem 1.5rem;
+  padding-top: 76px;
   background-image: url("/public/assets/onboarding/background.png");
   background-size: cover;
   background-position: center;

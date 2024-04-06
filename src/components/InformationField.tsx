@@ -20,7 +20,7 @@ const InformationField = ({
   handleButtonClick,
 }: InformationFieldProps) => {
   return (
-    <>
+    <MainContainer>
       <Container>
         <TitleContainer>
           <div className="title">
@@ -61,11 +61,19 @@ const InformationField = ({
       >
         {buttonText}
       </Button>
-    </>
+    </MainContainer>
   );
 };
 
 export default InformationField;
+
+const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  flex-grow: 1;
+`;
 
 const Container = styled.div`
   padding: 50px 0px;

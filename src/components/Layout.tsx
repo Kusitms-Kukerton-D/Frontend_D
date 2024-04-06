@@ -20,6 +20,9 @@ export default Layout;
 
 const Container = styled.div`
   padding: 15px 27px 9px 47px;
+  background: inherit;
+  position: absolute;
+  width: 390px;
 `;
 
 const InnerContainer = styled.div`

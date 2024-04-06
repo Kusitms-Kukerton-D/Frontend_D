@@ -70,7 +70,8 @@ export default SelectPage;
 
 const Container = styled.div`
   padding: 0 20px;
-  padding-bottom: 52px;
+  padding-top: 44px;
+  padding-bottom: 30px;
   height: 100%;
 
   display: flex;
