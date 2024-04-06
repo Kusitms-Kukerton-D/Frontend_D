@@ -31,7 +31,7 @@ const RandomTime = ({
                 onChange={(e) =>
                   setSelectedTime({
                     ...selectedTime,
-                    hour: parseInt(e.target.value),
+                    hour: e.target.value,
                   })
                 }
               />
@@ -43,7 +43,7 @@ const RandomTime = ({
                 onChange={(e) =>
                   setSelectedTime({
                     ...selectedTime,
-                    min: parseInt(e.target.value),
+                    min: e.target.value,
                   })
                 }
               />

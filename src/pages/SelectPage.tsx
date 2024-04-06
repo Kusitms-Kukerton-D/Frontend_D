@@ -18,6 +18,7 @@ const SelectPage = () => {
         category: selectedItem,
         hour: parseInt(selectedTime.hour),
         minute: parseInt(selectedTime.min),
+        user_id: 1,
       });
 
       if (response.status === 200) {
