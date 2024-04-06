@@ -17,7 +17,6 @@ const Button = ({ children, disabled, onClick }: ButtonProps) => {
 export default Button;
 
 const StyledButton = styled.button`
-  background: red;
   width: 100%;
   height: 50px;
 
