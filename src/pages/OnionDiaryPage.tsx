@@ -4,7 +4,9 @@ import Navigation from "../components/navigation/Navigation";
 const OnionDiaryPage = () => {
   return (
     <Layout>
-      <Content>1</Content>
+      <Content>
+        <img src="/public/assets/onion/onionDiary.png" alt="onion-diary" />
+      </Content>
       <NavigationLayout>
         <Navigation />
       </NavigationLayout>
