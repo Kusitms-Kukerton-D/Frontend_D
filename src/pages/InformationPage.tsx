@@ -3,6 +3,8 @@ import IconArrow from "../../public/assets/icons/arrow.svg";
 import { useState } from "react";
 import InterestedField from "../components/InformationField";
 import InformationField from "../components/InformationField";
+import { INFORMATION_FIELD } from "../constants/InformationConstants";
+import Button from "../components/Button";
 
 const InformationPage = () => {
   const [step, setStep] = useState(1);
@@ -26,7 +28,8 @@ const InformationPage = () => {
           <Step $active={step === 2} />
         </StepContainer>
       </Header>
-      <InformationField />
+      <InformationField fields={INFORMATION_FIELD[step - 1]} />
+      <Button>다음</Button>
     </Container>
   );
 };
@@ -35,6 +38,7 @@ export default InformationPage;
 
 const Container = styled.div`
   padding: 0 20px;
+  padding-bottom: 52px;
 `;
 
 const Header = styled.div``;
@@ -49,7 +53,7 @@ const HeaderInfoContainer = styled.div`
 
     .skip {
       color: ${(props) => props.theme.colors.gray700};
-      ${(props) => props.theme.fonts.heading2};
+      style: ${(props) => props.theme.fonts.heading2};
     }
   }
 
@@ -60,7 +64,7 @@ const HeaderInfoContainer = styled.div`
     left: 50%;
 
     color: ${(props) => props.theme.colors.black};
-    ${(props) => props.theme.fonts.heading2};
+    style: ${(props) => props.theme.fonts.heading2};
   }
 `;
 
