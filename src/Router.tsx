@@ -8,6 +8,7 @@ import CertifiedPage from "./pages/CertifiedPage";
 import RandomPage from "./pages/RandomPage";
 import MyPage from "./pages/MyPage";
 import OnionPage from "./pages/OnionPage";
+import SelectPage from "./pages/SelectPage";
 
 function Router() {
   return (
@@ -22,6 +23,7 @@ function Router() {
           <Route path="/onion" element={<OnionPage />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/information" element={<InformationPage />} />
+          <Route path="/select" element={<SelectPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
