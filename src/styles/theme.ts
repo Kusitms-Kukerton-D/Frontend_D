@@ -2,7 +2,30 @@ import { DefaultTheme } from "styled-components";
 /* TODO: 디자인 시스템 수정하기 */
 
 const colors = {
-  primary10: "#404079",
+  main800: "#0080FF",
+  main700: "#3399FF",
+  main600: "#66B3FF",
+  main500: "#99CCFF",
+  main400: "#CCE6FF",
+
+  sub800: "#FF3679",
+  sub700: "#FF5E94",
+  sub600: "#FF3679",
+  sub500: "#FFAFC9",
+  sub400: "#FFD7E4",
+
+  gray900: "#222222",
+  gray800: "#5F646F",
+  gray700: "#9397A1",
+  gray600: "#9397A1",
+  gray500: "#ABB0B9",
+  gray400: "#C5C8CE",
+  gray200: "#E2E5EB",
+  gray150: "#EBEEF1",
+  gray100: "#F2F4F8",
+  gray50: "#FBFBFD",
+  gray20: "#FDFDFE",
+  gray0: "#FFFFFF",
 } as const;
 
 interface Font {
