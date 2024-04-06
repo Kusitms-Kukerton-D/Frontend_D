@@ -46,65 +46,65 @@ const FONT = ({ font, weight, size, lineHeight }: Font): string => {
 
 const fonts = {
   primary: FONT({
-    font: "Pretendard",
+    font: "SUIT",
     weight: 600,
     size: 2.8,
     lineHeight: 160,
   }),
 
   heading1: FONT({
-    font: "Pretendard",
+    font: "SUIT",
     weight: 400,
     size: 2.2,
     lineHeight: 160,
   }),
   heading2: FONT({
-    font: "Pretendard",
+    font: "SUIT",
     weight: 400,
     size: 1.8,
     lineHeight: 160,
   }),
   heading3: FONT({
-    font: "Pretendard",
+    font: "SUIT",
     weight: 600,
     size: 1.6,
     lineHeight: 160,
   }),
 
   body1: FONT({
-    font: "Pretendard",
+    font: "SUIT",
     weight: 400,
     size: 1.6,
     lineHeight: 160,
   }),
   body2: FONT({
-    font: "Pretendard",
+    font: "SUIT",
     weight: 400,
     size: 1.4,
     lineHeight: 160,
   }),
 
   caption: FONT({
-    font: "Pretendard",
+    font: "SUIT",
     weight: 400,
     size: 1.3,
     lineHeight: 160,
   }),
 
   label1: FONT({
-    font: "Pretendard",
+    font: "SUIT",
     weight: 600,
     size: 1.6,
     lineHeight: 160,
   }),
   label2: FONT({
-    font: "Pretendard",
+    font: "SUIT",
     weight: 400,
     size: 1.6,
     lineHeight: 160,
   }),
   label3: FONT({
-    font: "Pretendard",
+    font: "SUIT",
     weight: 400,
     size: 1.4,
     lineHeight: 160,
