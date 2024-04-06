@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import Navigation from "../components/navigation/Navigation";
 
-const MainPage = () => {
+const MyPage = () => {
   return (
     <Layout>
       <Content>1</Content>
@@ -12,7 +12,7 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default MyPage;
 
 const Layout = styled.div`
   display: flex;
