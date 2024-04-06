@@ -47,26 +47,26 @@ const FONT = ({ font, weight, size, lineHeight }: Font): string => {
 const fonts = {
   primary: FONT({
     font: "SUIT",
-    weight: 600,
+    weight: 800,
     size: 28,
     lineHeight: 160,
   }),
 
   heading1: FONT({
     font: "SUIT",
-    weight: 600,
+    weight: 500,
     size: 22,
-    lineHeight: 160,
+    lineHeight: 120,
   }),
   heading2: FONT({
     font: "SUIT",
-    weight: 600,
+    weight: 400,
     size: 18,
     lineHeight: 160,
   }),
   heading3: FONT({
     font: "SUIT",
-    weight: 600,
+    weight: 400,
     size: 16,
     lineHeight: 120,
   }),
