@@ -5,15 +5,18 @@ import { useEffect, useState } from "react";
 
 const MyCertifiedPage = () => {
   const navigate = useNavigate();
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<{
+    imageUrl: string;
+    userTitle: string;
+    localDate: string;
+    review: string;
+  }>();
 
   const mypageDetail = async () => {
     try {
       const response = await Axios.get(`certification/1`);
       if (response.status === 200) {
         setData(response.data.data);
-      } else {
-        console.error("로그인에 실패했습니다.");
       }
     } catch (error) {
       console.error("요청 중 오류가 발생했습니다:", error);
@@ -23,8 +26,6 @@ const MyCertifiedPage = () => {
   useEffect(() => {
     mypageDetail();
   }, []);
-
-  console.log(data);
 
   return (
     <Layout>
@@ -43,7 +44,18 @@ const MyCertifiedPage = () => {
       </Header>
       <img src="/public/assets/certified/certifiedBox.png" alt="certified" />
 
-      <img src="/public/assets/certified/certifiedDiary.png" alt="certified" />
+      <Box>
+        {data && (
+          <>
+            <img src={data.imageUrl} alt="certified" />
+            <div>
+              <div>{data.userTitle}</div>
+              <div>{data.localDate}</div>
+            </div>
+            <Review>{data.review}</Review>
+          </>
+        )}
+      </Box>
     </Layout>
   );
 };
@@ -70,4 +82,20 @@ const Header = styled.div`
   }
 
   margin-bottom: 1rem;
+`;
+
+const Box = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+  }
+`;
+
+const Review = styled.div`
+  margin-top: 0.5rem;
 `;
