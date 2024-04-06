@@ -12,6 +12,7 @@ import SelectPage from "./pages/SelectPage";
 import MyPageDetail from "./pages/MyPageDetail";
 import CouponPage from "./pages/CouponPage";
 import RandomResultPage from "./pages/RandomResultPage";
+import OnionDiaryPage from "./pages/OnionDiaryPage";
 
 function Router() {
   return (
@@ -25,6 +26,7 @@ function Router() {
           <Route path="/random" element={<RandomPage />} />
           <Route path="/random/result" element={<RandomResultPage />} />
           <Route path="/onion" element={<OnionPage />} />
+          <Route path="/onion/diary" element={<OnionDiaryPage />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/mypage/:id" element={<MyPageDetail />} />
           <Route path="/information" element={<InformationPage />} />

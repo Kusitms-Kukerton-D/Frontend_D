@@ -29,7 +29,7 @@ const MyCertifiedPage = () => {
 export default MyCertifiedPage;
 
 const Layout = styled.div`
-  padding: 1.5rem 1rem;
+  padding: 3rem 1rem 1.5rem 1rem;
 
   > img {
     width: 100%;

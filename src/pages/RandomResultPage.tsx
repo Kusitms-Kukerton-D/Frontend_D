@@ -67,7 +67,7 @@ const RandomResultPage = () => {
 export default RandomResultPage;
 
 const Layout = styled.div`
-  padding: 1.5rem 1rem;
+  padding: 3rem 1rem 1.5rem 1rem;
 
   background-image: url("/public/assets/random/resultBackground.png");
   background-size: cover;

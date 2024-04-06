@@ -130,8 +130,6 @@ const GlobalStyle = createGlobalStyle`
     width: 390px;
     height: 100%;
     font-family: "Pretendard";
-    border-left: 1px solid black;
-    border-right: 1px solid black;
     margin: 0 auto;
   }
 
