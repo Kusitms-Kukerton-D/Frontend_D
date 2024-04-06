@@ -10,6 +10,9 @@ const Navigation = () => {
         window.location.href = "/random";
         break;
       case 3:
+        window.location.href = "/onion";
+        break;
+      case 4:
         window.location.href = "/mypage";
         break;
       default:
@@ -59,6 +62,22 @@ const Navigation = () => {
         <List onClick={() => handleIconClick(3)}>
           <img
             src={
+              currentPath === "/onion"
+                ? "/public/assets/navigation/menu8.svg"
+                : "/public/assets/navigation/menu7.svg"
+            }
+          />
+          <div
+            style={{
+              color: currentPath === "/onion" ? "#434855" : "#9397A1",
+            }}
+          >
+            양파키우기
+          </div>
+        </List>
+        <List onClick={() => handleIconClick(4)}>
+          <img
+            src={
               currentPath === "/mypage"
                 ? "/public/assets/navigation/menu6.svg"
                 : "/public/assets/navigation/menu5.svg"
@@ -82,7 +101,7 @@ export default Navigation;
 const ListLayout = styled.ul`
   display: flex;
   justify-content: space-between;
-  padding: 1rem 3.5rem;
+  padding: 1rem 2rem;
   border-radius: 20px 20px 0 0;
   box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;

@@ -5,6 +5,7 @@ import MainPage from "./pages/MainPage";
 import CertifiedPage from "./pages/CertifiedPage";
 import RandomPage from "./pages/RandomPage";
 import MyPage from "./pages/MyPage";
+import OnionPage from "./pages/OnionPage";
 
 function Router() {
   return (
@@ -15,6 +16,7 @@ function Router() {
         <Route path="/main" element={<MainPage />} />
         <Route path="/certified" element={<CertifiedPage />} />
         <Route path="/random" element={<RandomPage />} />
+        <Route path="/onion" element={<OnionPage />} />
         <Route path="/mypage" element={<MyPage />} />
       </Routes>
     </BrowserRouter>
