@@ -23,11 +23,14 @@ const SelectPage = () => {
 
       if (response.status === 200) {
         navigate("/random/result");
+        console.log("test");
       } else {
         console.error("");
+        navigate("/random/result");
       }
     } catch (error) {
       console.error("요청 중 오류가 발생했습니다:", error);
+      navigate("/random/result");
     }
   };
 
