@@ -17,7 +17,7 @@ const RandomPage = () => {
           <img src="/public/assets/random/randomBox.png" alt="random" />
           <Button
             onClick={() => {
-              navigate("result");
+              navigate("/select");
             }}
           >
             랜덤 박스 뽑기

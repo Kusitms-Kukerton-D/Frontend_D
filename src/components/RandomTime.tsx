@@ -5,10 +5,6 @@ import styled from "styled-components";
 interface RandomTimeProps {
   selectedTime: { hour: any; min: any };
   handleButtonClick: () => void;
-  /* setSelectedTime: Dispatch<
-    SetStateAction<{ hour: number | null; min: number | null }>
-  >; */
-
   setSelectedTime: ({ hour, min }: { hour: any; min: any }) => void;
 }
 

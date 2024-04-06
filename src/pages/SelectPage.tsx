@@ -3,11 +3,32 @@ import IconArrow from "../../public/assets/icons/arrow.svg";
 import { useState } from "react";
 import RandomField from "../components/RandomField";
 import RandomTime from "../components/RandomTime";
+import Axios from "../apis/axios";
+import { useNavigate } from "react-router-dom";
 
 const SelectPage = () => {
   const [step, setStep] = useState(1);
   const [selectedItem, setSelectedItem] = useState("");
   const [selectedTime, setSelectedTime] = useState({ hour: "", min: "" });
+  const navigate = useNavigate();
+
+  const handleOpen = async () => {
+    try {
+      const response = await Axios.post("random", {
+        category: selectedItem,
+        hour: parseInt(selectedTime.hour),
+        minute: parseInt(selectedTime.min),
+      });
+
+      if (response.status === 200) {
+        navigate("/random/result");
+      } else {
+        console.error("");
+      }
+    } catch (error) {
+      console.error("요청 중 오류가 발생했습니다:", error);
+    }
+  };
 
   return (
     <Container>
@@ -39,8 +60,8 @@ const SelectPage = () => {
         {step === 2 && (
           <RandomTime
             selectedTime={selectedTime}
-            handleButtonClick={() => console.log("tets")}
             setSelectedTime={setSelectedTime}
+            handleButtonClick={handleOpen}
           />
         )}
       </InnerContainer>

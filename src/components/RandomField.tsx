@@ -23,19 +23,19 @@ const RandomField = ({
         </TitleContainer>
         <FieldCardContainer>
           <FieldCard
-            $active={selectedItem === "interest"}
-            $type="interest"
-            onClick={() => setSelectedItem("interest")}
+            $active={selectedItem === "Interested"}
+            $type="Interested"
+            onClick={() => setSelectedItem("Interested")}
           >
-            <img src={InterestImage} alt="interest" />
+            <img src={InterestImage} alt="Interested" />
             <div className="description">관심있는 분야 추천 받기</div>
           </FieldCard>
           <FieldCard
-            $active={selectedItem === "disinterest"}
-            $type="disinterest"
-            onClick={() => setSelectedItem("disinterest")}
+            $active={selectedItem === "Restrained"}
+            $type="Restrained"
+            onClick={() => setSelectedItem("Restrained")}
           >
-            <img src={DisinterestImage} alt="disinterest" />
+            <img src={DisinterestImage} alt="Restrained" />
             <div className="description">자제하고 싶은 분야 추천 받기</div>
           </FieldCard>
         </FieldCardContainer>
@@ -110,7 +110,7 @@ const FieldCard = styled.div<{ $active: boolean; $type: string }>`
 
   ${(props) =>
     props.$active &&
-    props.$type === "disinterest" &&
+    props.$type === "Restrained" &&
     css`
       background: rgba(255, 215, 228, 0.55);
       border-color: var(--sub-sub, #ff3679);
@@ -118,7 +118,7 @@ const FieldCard = styled.div<{ $active: boolean; $type: string }>`
 
   ${(props) =>
     props.$active &&
-    props.$type === "interest" &&
+    props.$type === "Interested" &&
     css`
       background: rgba(204, 230, 255, 0.55);
       border-color: var(--main-main, #0080ff);
