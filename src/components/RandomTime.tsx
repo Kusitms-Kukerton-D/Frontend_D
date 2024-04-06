@@ -1,4 +1,3 @@
-import "react-time-picker-typescript/dist/style.css";
 import Button from "./Button";
 import styled from "styled-components";
 
