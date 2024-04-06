@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 
 interface CertifiedBoxProps {
@@ -7,6 +8,8 @@ interface CertifiedBoxProps {
 }
 
 const CertifiedBox = ({ img, title, description }: CertifiedBoxProps) => {
+  const navigate = useNavigate();
+
   return (
     <Layout>
       <Box>
@@ -16,7 +19,7 @@ const CertifiedBox = ({ img, title, description }: CertifiedBoxProps) => {
           <p>{description}</p>
         </div>
       </Box>
-      <Button>인증하기</Button>
+      <Button onClick={() => navigate("/register")}>인증하기</Button>
     </Layout>
   );
 };
