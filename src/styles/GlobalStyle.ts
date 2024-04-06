@@ -123,11 +123,16 @@ const GlobalStyle = createGlobalStyle`
   html {
     width: 100%;
     height: 100vh;
+    background: white;
+    
   }
   body {
-    width: 100%;
+    width: 390px;
     height: 100%;
     font-family: "Pretendard";
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin: 0 auto;
   }
 
   ol,
