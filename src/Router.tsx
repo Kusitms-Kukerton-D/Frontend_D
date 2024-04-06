@@ -13,6 +13,8 @@ import MyPageDetail from "./pages/MyPageDetail";
 import CouponPage from "./pages/CouponPage";
 import RandomResultPage from "./pages/RandomResultPage";
 import OnionDiaryPage from "./pages/OnionDiaryPage";
+import RegisterPage from "./pages/RegisterPage";
+import MyCertification from "./pages/MyCertification";
 
 function Router() {
   return (
@@ -32,6 +34,8 @@ function Router() {
           <Route path="/information" element={<InformationPage />} />
           <Route path="/select" element={<SelectPage />} />
           <Route path="/coupon" element={<CouponPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/myCertification" element={<MyCertification />} />
         </Route>
       </Routes>
     </BrowserRouter>
