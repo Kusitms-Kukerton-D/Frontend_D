@@ -10,7 +10,6 @@ function Router() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/" element={<MainPage />} />
           <Route path="/information" element={<InformationPage />} />
           <Route path="/" element={<OnboardingPage />} />
           <Route path="/auth" element={<RedirectPage />} />
