@@ -27,6 +27,7 @@ const InnerContainer = styled.div`
   justify-content: space-between;
 
   span {
+    width: 54px;
     color: #202842;
     text-align: center;
     font-family: Pretendard;
