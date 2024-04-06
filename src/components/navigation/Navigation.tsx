@@ -85,6 +85,7 @@ const ListLayout = styled.ul`
   padding: 1rem 3.5rem;
   border-radius: 20px 20px 0 0;
   box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
 `;
 
 const List = styled.li`
