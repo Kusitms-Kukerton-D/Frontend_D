@@ -26,6 +26,8 @@ const colors = {
   gray50: "#FBFBFD",
   gray20: "#FDFDFE",
   gray0: "#FFFFFF",
+
+  black: "#000000",
 } as const;
 
 interface Font {
