@@ -9,7 +9,7 @@ const RedirectPage = () => {
     try {
       const response = await Axios.get(`member/login?code=${code}`);
       if (response.status === 200) {
-        window.location.href = "/main";
+        window.location.href = "/certified";
       } else {
         console.error("로그인에 실패했습니다.");
       }

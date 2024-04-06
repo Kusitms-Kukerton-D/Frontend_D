@@ -1,8 +1,30 @@
 import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
+import Axios from "../apis/axios";
+import { useEffect, useState } from "react";
 
 const MyCertifiedPage = () => {
   const navigate = useNavigate();
+  const [data, setData] = useState([]);
+
+  const mypageDetail = async () => {
+    try {
+      const response = await Axios.get(`certification/1`);
+      if (response.status === 200) {
+        setData(response.data.data);
+      } else {
+        console.error("로그인에 실패했습니다.");
+      }
+    } catch (error) {
+      console.error("요청 중 오류가 발생했습니다:", error);
+    }
+  };
+
+  useEffect(() => {
+    mypageDetail();
+  }, []);
+
+  console.log(data);
 
   return (
     <Layout>

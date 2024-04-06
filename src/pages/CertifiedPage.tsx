@@ -26,7 +26,11 @@ const CertifiedPage = () => {
       <Title>나의 인증 리스트</Title>
       <Content>
         {data.map(
-          (certified: { img: string; taskTitle: string; content: string }) => (
+          (certified: {
+            imageUrl: string;
+            taskTitle: string;
+            content: string;
+          }) => (
             <CertifiedBox
               img={certified.imageUrl}
               title={certified.taskTitle}
