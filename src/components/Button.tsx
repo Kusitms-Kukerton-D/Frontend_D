@@ -2,10 +2,16 @@ import styled from "styled-components";
 
 interface ButtonProps {
   children: React.ReactNode;
+  disabled?: boolean;
+  onClick?: () => void;
 }
 
-const Button = ({ children }: ButtonProps) => {
-  return <StyledButton type="button">{children}</StyledButton>;
+const Button = ({ children, disabled, onClick }: ButtonProps) => {
+  return (
+    <StyledButton type="button" disabled={disabled} onClick={onClick}>
+      {children}
+    </StyledButton>
+  );
 };
 
 export default Button;
@@ -25,4 +31,10 @@ const StyledButton = styled.button`
   font-style: normal;
   font-weight: 600;
   line-height: 18px; /* 112.5% */
+
+  &:disabled {
+    background: var(--color-neutral-200, #e2e5eb);
+    color: #000;
+    cursor: default;
+  }
 `;

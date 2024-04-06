@@ -1,13 +1,17 @@
 import styled from "styled-components";
 import IconArrow from "../../public/assets/icons/arrow.svg";
 import { useState } from "react";
-import InterestedField from "../components/InformationField";
 import InformationField from "../components/InformationField";
 import { INFORMATION_FIELD } from "../constants/InformationConstants";
-import Button from "../components/Button";
 
 const InformationPage = () => {
   const [step, setStep] = useState(1);
+  const [selectedInterestFields, setSelectedInterestFields] = useState<
+    string[]
+  >([]);
+  const [selectedDisinterestFields, setSelectedDisinterestFields] = useState<
+    string[]
+  >([]);
 
   return (
     <Container>
@@ -28,8 +32,28 @@ const InformationPage = () => {
           <Step $active={step === 2} />
         </StepContainer>
       </Header>
-      <InformationField fields={INFORMATION_FIELD[step - 1]} />
-      <Button>다음</Button>
+      {step === 1 && (
+        <InformationField
+          interestType={true}
+          fields={INFORMATION_FIELD[0]}
+          selectedFields={selectedInterestFields}
+          setSelectedFields={setSelectedInterestFields}
+          buttonText="다음"
+          handleButtonClick={() => setStep(2)}
+        />
+      )}
+      {step === 2 && (
+        <InformationField
+          interestType={false}
+          fields={INFORMATION_FIELD[1]}
+          selectedFields={selectedDisinterestFields}
+          setSelectedFields={setSelectedDisinterestFields}
+          buttonText="저장하기"
+          handleButtonClick={() => {
+            // 백엔드에서 정보 등록
+          }}
+        />
+      )}
     </Container>
   );
 };
